@@ -1,23 +1,33 @@
 package com.bennyhuo.kotlin
 
-fun interface Action {
-    fun run()
+
+
+inline fun <T> test(block: () -> T): T {
+    return block()
 }
 
-fun hello(action: Action) {
-    action.run()
-}
 
-fun hello2(runnable: Runnable){
-    runnable.run()
-}
 
 fun main() {
-    hello {
-        println("Hello")
+
+
+
+
+    val result = run {
+        var str = currentValue()
+        if (str == null) {
+            str = "test"
+        }
+        str // the Kotlin compiler knows that str is not null here
     }
 
-    hello2 {
-        println("Hello")
+    println(result::class)
+
+    var y: String? = null
+
+    if (y == null){
+        y = "hello"
     }
+    y.length
+    
 }
