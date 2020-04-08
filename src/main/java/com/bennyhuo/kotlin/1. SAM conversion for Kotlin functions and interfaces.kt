@@ -11,7 +11,17 @@ fun runRunnable(r: Runnable) = r.run()
 fun main() {
     runAction(Action { println("Not good..") })
 
-    runAction { println("Hello, Kotlin 1.4!") }
+    val action = {
+        println("Action")
+    }
 
-    runRunnable { println("Hello, Kotlin 1.4!") }
+    runAction(action)
+
+    runAction {
+        println("Hello, Kotlin 1.4!")
+    }
+
+    runRunnable {
+        println("Hello, Kotlin 1.4!")
+    }
 }
