@@ -6,6 +6,6 @@ fun main() {
     val person = Person(
         "bennyhuo",
         30,
-        1
+        1,
     )
 }

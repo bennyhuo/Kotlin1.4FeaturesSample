@@ -1,6 +1,6 @@
 plugins {
     java
-    kotlin("jvm") version "1.4-M1"
+    kotlin("jvm") version "1.4-M2"
 }
 
 group = "com.bennyhuo.kotlin"
